@@ -1,0 +1,51 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react-hooks",
+    "prettier",
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      { "singleQuote": true, "trailingComma": "all" ,"endOfLine": "auto" }
+    ],
+    "react/display-name": "off",
+    "react/prop-types": "off",
+    "comma-dangle": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "no-console": "warn",
+    "no-unexpected-multiline": "warn",
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }]
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "17.0.1"
+    },
+    "import/extensions": [".js",".jsx",".ts",".tsx"],
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts",".tsx"]
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js",".jsx",".ts",".tsx"]
+      }
+    }
+  }
+}
